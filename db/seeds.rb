@@ -12,24 +12,50 @@ require "net/http"
 puts 'clean DB'
 Animal.destroy_all
 
-response_body = {}
+response_allfish_body = {}
+response_mammals_body = {}
 
-url = URI("https://fishbase.ropensci.org/species?&limit=5000")
+url_allfish = URI("https://fishbase.ropensci.org/species?&limit=3000")
+url_mammals = URI("https://fishbase.ropensci.org/sealifebase/species?&limit=3000")
 
-https = Net::HTTP.new(url.host, url.port);
-https.use_ssl = true
+https_allfish = Net::HTTP.new(url_allfish.host, url_allfish.port);
+https_allfish.use_ssl = true
 
-request = Net::HTTP::Get.new(url)
-response = https.request(request)
-response_body = JSON.parse(response.read_body)
+https_mammals = Net::HTTP.new(url_mammals.host, url_mammals.port);
+https_mammals.use_ssl = true
 
-animals = response_body['data']
+request_allfish = Net::HTTP::Get.new(url_allfish)
+response_allfish = https_allfish.request(request_allfish)
+response_allfish_body = JSON.parse(response_allfish.read_body)
+
+request_mammals = Net::HTTP::Get.new(url_mammals)
+response_mammals = https_mammals.request(request_mammals)
+response_mammals_body = JSON.parse(response_mammals.read_body)
+
+
+allfish = response_allfish_body['data']
+mammals = response_mammals_body["data"]
+
+animals = allfish + mammals
 
 animals.each do |animal|
-  unless animal["Genus"] == nil || animal["Species"] == nil || animal["FBname"] == nil
+  unless animal["Genus"] == nil || animal["Species"] == nil || animal["FBname"] == nil || animal["image"] == nil
     Animal.create(common_name: animal["FBname"], latin_name: "#{animal["Genus"]} #{animal["Species"]}", description: animal["Comments"], image: animal["image"] )
   end
 end
+
+# allfish.each do |fish|
+#   unless fish["Genus"] == nil || fish["Species"] == nil || fish["FBname"] == nil
+#     Animal.create(common_name: fish["FBname"], latin_name: "#{fish["Genus"]} #{fish["Species"]}", description: fish["Comments"], image: fish["image"] )
+#   end
+# end
+
+# mammals.each do |mammal|
+#   unless mammal["Genus"] == nil || mammal["Species"] == nil || mammal["FBname"] == nil
+#     Animal.create(common_name: mammal["FBname"], latin_name: "#{mammal["Genus"]} #{mammal["Species"]}", description: mammal["Comments"], image: mammal["image"] )
+#   end
+# end
+
 
 #puts response_body["data"][0]["Genus"] + [Species]
 
