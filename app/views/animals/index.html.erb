@@ -7,6 +7,9 @@
     <h2><%= animal.common_name %></h2>
     <h5><%= animal.latin_name %></h5>
     <li><%= animal.description %></li>
+    <% if animal.image %>
+    <li> <%= image_tag animal.image, width: 200 %> </li>
+    <% end %>
     <br>
   <% end %>
 </ul>
