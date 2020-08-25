@@ -103,7 +103,7 @@ nav {
 		left: 0;
 		width: 80%;
 		height: calc(100% - 45px);
-		background-color: #085954;
+		background-color: $bluepalette;
 		display: block;
 		padding: 0;
 		-webkit-transform: translateX(-100%);
@@ -111,6 +111,7 @@ nav {
 		-o-transform: translateX(-100%);
 		transform: translateX(-100%);
 		transition: transform 0.5s ease-in;
+    opacity: 97%;
 	}
 
 	.nav-menu > li {
