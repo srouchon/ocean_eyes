@@ -13,6 +13,26 @@
 				<li>
 					<a href="#">Project</a>
 				</li>
+        <div class="sign-in-out">
+          <% if user_signed_in? %>
+            <li class="nav-item-active">
+              <%= link_to "Favorites", favorites_path %>
+            </li>
+            <li class="nav-item">
+
+            </li>
+            <li>
+              <div>
+                <%= link_to "Settings", edit_user_registration_path %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Login", new_user_session_path %>
+            </li>
+          <% end %>
+        </div>
 			</ul>
 			<div class="menu-btn">
 				<div class="toggle-btn">
@@ -21,5 +41,8 @@
 					<div class="line3"></div>
 				</div>
 			</div>
+
 		</nav>
 	</header>
+
+
