@@ -6,7 +6,10 @@ class PagesController < ApplicationController
 
   def associations
   end
-  
+
   def thanks
+  end
+
+  def aboutUs
   end
 end
