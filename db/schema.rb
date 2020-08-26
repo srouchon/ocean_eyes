@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_24_143000) do
+ActiveRecord::Schema.define(version: 2020_08_26_145258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 2020_08_24_143000) do
 
   create_table "habitats", force: :cascade do |t|
     t.bigint "animal_id", null: false
-    t.bigint "subregion_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "long"
+    t.float "lat"
     t.index ["animal_id"], name: "index_habitats_on_animal_id"
-    t.index ["subregion_id"], name: "index_habitats_on_subregion_id"
   end
 
   create_table "subregions", force: :cascade do |t|
@@ -64,5 +64,4 @@ ActiveRecord::Schema.define(version: 2020_08_24_143000) do
   add_foreign_key "favorites", "animals"
   add_foreign_key "favorites", "users"
   add_foreign_key "habitats", "animals"
-  add_foreign_key "habitats", "subregions"
 end
