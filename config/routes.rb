@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :animals, only: [:index, :show] do
     resources :favorites, only: [:create]
   end
-
+  get 'thanks', to: 'pages#thanks'
   resources :subregions, only: [:index]
   resources :favorites, only: [:index, :destroy]
 end
