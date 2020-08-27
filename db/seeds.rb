@@ -11,12 +11,15 @@ require "net/http"
 
 puts 'clean DB'
 Animal.destroy_all
+Habitat.destroy_all
+
+# queries on Fishbase API
 
 response_allfish_body = {}
 response_mammals_body = {}
 
-url_allfish = URI("https://fishbase.ropensci.org/species?&limit=3000")
-url_mammals = URI("https://fishbase.ropensci.org/sealifebase/species?&limit=3000")
+url_allfish = URI("https://fishbase.ropensci.org/species?&limit=500")
+url_mammals = URI("https://fishbase.ropensci.org/sealifebase/species?&limit=500")
 
 https_allfish = Net::HTTP.new(url_allfish.host, url_allfish.port);
 https_allfish.use_ssl = true
@@ -38,35 +41,37 @@ mammals = response_mammals_body["data"]
 
 animals = allfish + mammals
 
-animals.each do |animal|
-  unless animal["Genus"] == nil || animal["Species"] == nil || animal["FBname"] == nil || animal["image"] == nil
-    Animal.create(common_name: animal["FBname"], latin_name: "#{animal["Genus"]} #{animal["Species"]}", description: animal["Comments"], image: animal["image"] )
+# queries on GBIF API
+
+def parse_gbif_api(animal)
+  response_habitats_body = {}
+  url_habitats_infos = URI("https://api.gbif.org/v1/occurrence/search?scientificName=#{animal[:latin_name]}&limit=10")
+
+  https_habitats_infos = Net::HTTP.new(url_habitats_infos.host, url_habitats_infos.port);
+  https_habitats_infos.use_ssl = true
+
+  request_habitats_infos = Net::HTTP::Get.new(url_habitats_infos)
+  response_habitats_infos = https_habitats_infos.request(request_habitats_infos)
+  response_habitats_infos_body = JSON.parse(response_habitats_infos.read_body)
+
+  habitats_infos = response_habitats_infos_body['results']
+
+  habitats_infos.each do |result|
+    if animal[:latin_name] == result["species"]
+      bbb = Habitat.create!(animal_id: animal.id, long: result["decimalLongitude"], lat: result["decimalLatitude"])
+    else
+      puts 'error'
+    end
   end
 end
 
-# allfish.each do |fish|
-#   unless fish["Genus"] == nil || fish["Species"] == nil || fish["FBname"] == nil
-#     Animal.create(common_name: fish["FBname"], latin_name: "#{fish["Genus"]} #{fish["Species"]}", description: fish["Comments"], image: fish["image"] )
-#   end
-# end
+# seed
 
-# mammals.each do |mammal|
-#   unless mammal["Genus"] == nil || mammal["Species"] == nil || mammal["FBname"] == nil
-#     Animal.create(common_name: mammal["FBname"], latin_name: "#{mammal["Genus"]} #{mammal["Species"]}", description: mammal["Comments"], image: mammal["image"] )
-#   end
-# end
-
-
-#puts response_body["data"][0]["Genus"] + [Species]
-
-# iterer sur response_body
-# aller sur les pages suivantes
-# dans array, liste species
-
-# puts 'index some animals'
-# a = Animal.create!(common_name: 'crevette pistolet tigre', latin_name: 'Alpheus bellulus', description: "La crevette pistolet tigre a la forme d'un petit homard avec un corps blanc strié de bandes marron orangé tachetées de blanc.")
-# Animal.create!(common_name: 'dauphin commun', latin_name: 'Delphinus delphis', description: "Le dauphin commun est gris foncé à noir sur le dos, blanc jaunâtre sur les flancs. Il a un dessin en forme de sablier et une ligne foncé allant de la nageoire pectorale au bec.")
-# Animal.create!(common_name: 'baleine à bosse', latin_name: 'Megaptera novaeangliae', description: "Le dessus du corps des baleines à bosse est entièrement noir, le dessous est plutôt blanchâtre. La tête et la mâchoire inférieure sont couvertes de petites protubérances appelées tubercules. Les nageoires pectorales, noires et blanches, peuvent atteindre jusqu'au tiers de la longueur du corps. ")
-# Animal.create!(common_name: 'raie pastenague épineuse', latin_name: 'Dasyatis centroura ', description: "La raie pastenague épineuse a le corps en forme de losange arrondi de couleur gris clair à foncé ou gris olivâtre. Des tubercules sont présents sur le dessus du corps. Sa tête a un museau pointu et de petits yeux.")
+animals.each do |animal|
+  unless animal["Genus"] == nil || animal["Species"] == nil || animal["FBname"] == nil || animal["image"] == nil
+    a = Animal.create(common_name: animal["FBname"], latin_name: "#{animal["Genus"]} #{animal["Species"]}", description: animal["Comments"], image: animal["image"])
+    parse_gbif_api(a)
+  end
+end
 
 puts 'finished'

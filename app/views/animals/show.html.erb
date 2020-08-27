@@ -3,7 +3,15 @@
 
 <h2><%= @animal.common_name %></h2>
 <p><%= @animal.latin_name %></p>
+<%= image_tag @animal.image %><br>
 <p><%= @animal.description %></p>
-<%# <%= image_tag animal.photo %>
+<ul>
+  <% @animal.habitats.each do |habitat| %>
+  <li>
+    <p>Longitude : <%= habitat.long %></p>
+    <p>Latitude : <%= habitat.lat %></p>
+  </li>
+  <% end %>
+</ul>
 
 <%= link_to '< Back', animals_path%>

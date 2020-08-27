@@ -3,7 +3,6 @@
 
 <h1 class="text-center">Searching animals</h1>
 
-    <%= render 'shared/searchbar' %>
 
 <div class="container">
   <div class="row">
@@ -13,7 +12,7 @@
           <% @animals.each do |animal| %>
             <li><%= link_to animal.common_name, animal_path(animal) %></li>
               <h4><%= animal.common_name %></h4>
-              <p><%= animal.latin_name %></p>
+              <p><i><%= animal.latin_name %></i></p>
               <p><%= animal.description %></p>
               <% if animal.image %>
             <li> <%= image_tag animal.image, width: 200 %> </li>
