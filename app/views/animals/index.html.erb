@@ -5,22 +5,18 @@
 
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-8 offset-sm-2">
-      <div id="animals">
-        <ul>
-          <% @animals.each do |animal| %>
-            <li><%= link_to animal.common_name, animal_path(animal) %></li>
-              <h4><%= animal.common_name %></h4>
-              <p><i><%= animal.latin_name %></i></p>
-              <p><%= animal.description %></p>
-              <% if animal.image %>
-            <li> <%= image_tag animal.image, width: 200 %> </li>
-          <% end %>
-        </ul>
+  <div class="row justify-content-center">
+    <% @animals.each do |animal| %>
+      <div class="card-animal" id="animals">
+        <% if animal.image %>
+        <%= image_tag animal.image, width: 200 %>
+          <div class="card-animal-infos">
+            <h2><%= animal.common_name %></h2>
+            <h4><i><%= animal.latin_name %></i></h4>
+          </div>
+        <% end %>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
-<% end %>
