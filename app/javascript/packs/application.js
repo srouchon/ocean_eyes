@@ -36,3 +36,9 @@ document.addEventListener('turbolinks:load', () => {
   navSlide();
   flipcard();
 });
+
+import { initMapbox } from '../plugins/init_mapbox';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})

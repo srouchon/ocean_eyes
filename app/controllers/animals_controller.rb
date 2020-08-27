@@ -4,12 +4,32 @@ class AnimalsController < ApplicationController
   def index
     if params[:query].present?
       @animals = Animal.global_search(params[:query])
+      @markers = @animals.geocoded.map do |animal|
+        {
+          lat: animal.habitats.first.lat,
+          lng: animal.habitats.first.long
+        }
+      end
     else
       @animals = Animal.all
+      @markers = @animals.geocoded.map do |animal|
+        {
+          lat: animal.habitats.first.lat,
+          lng: animal.habitats.first.long
+        }
+      end
     end
   end
 
   def show
     @animal = Animal.find(params[:id])
+    @markers = []
+    @animal.habitats.each do |habitat|
+      @markers << {
+        lat: habitat.lat,
+        lng: habitat.long
+      }
+    end
+
   end
 end
