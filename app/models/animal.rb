@@ -1,7 +1,6 @@
 class Animal < ApplicationRecord
-  has_many :habitats
-  has_many :subregions, through: :habitats
   has_many :users, through: :favorites
+  has_many :habitats, dependent: :destroy
 
   include PgSearch::Model
   pg_search_scope :global_search,

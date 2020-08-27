@@ -1,5 +1,3 @@
-<h1>Animals#show</h1>
-<p>Find me in app/views/animals/show.html.erb</p>
 
 <h2><%= @animal.common_name %></h2>
 <p><%= @animal.latin_name %></p>
@@ -11,4 +9,21 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<%= link_to '< Back', animals_path%>
+<div class="container-animal text-center">
+  <h2><%= @animal.common_name %></h2>
+  <p><%= @animal.latin_name %></p>
+  <%= image_tag @animal.image %><br>
+  <p><%= @animal.description %></p>
+  <ul>
+    <% @animal.habitats.each do |habitat| %>
+    <li>
+      <p>Longitude : <%= habitat.long %></p>
+      <p>Latitude : <%= habitat.lat %></p>
+    </li>
+    <% end %>
+  </ul>
+  <div class="mt-4">
+    <%= link_to '< Back', animals_path, id: 'back-btn', class: 'btn btn-primary' %>
+  </div>
+</div>
+

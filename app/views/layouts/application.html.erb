@@ -7,26 +7,33 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-  
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Navigation Bar</title>
-  
-	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="shortcut icon" type="image/png" href="imgs/favicon.png">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <title>Navigation Bar</title> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  	<!-- <link rel="shortcut icon" type="image/png" href="imgs/favicon.png"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+
+    <!-- AUGMENTED REALITY SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
+    <%= render 'shared/sign-in-out' %>
     <%= render 'shared/searchbar' %>
 
     <%= yield %>
-    
-    <script src="js/script.js"></script>
+
+    <%= render 'shared/footer' %>
+    <%= render 'shared/flashes' %>
+
+    <!-- <script src="js/script.js"></script> -->
+
   </body>
 </html>

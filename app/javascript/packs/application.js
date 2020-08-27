@@ -28,12 +28,13 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import {navSlide} from '../components/navbar';
-
+import {flipcard} from '../components/flipcard';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 
   navSlide();
+  flipcard();
 });
 
 import { initMapbox } from '../plugins/init_mapbox';

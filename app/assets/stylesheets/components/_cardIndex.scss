@@ -1,0 +1,30 @@
+.card-animal {
+  margin: 8px;
+  overflow: hidden;
+  border-radius: 5px;
+  width: 90%;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-animal img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-animal h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-animal h4 {
+  font-size: 12px;
+}
+.card-animal .card-animal-infos {
+  padding: 16px;
+}
