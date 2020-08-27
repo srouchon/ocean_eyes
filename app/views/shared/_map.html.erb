@@ -1,0 +1,10 @@
+<head>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+var mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoib3BoZWxpZXJvdXgiLCJhIjoiY2tkaWw1enhoMDYzZTJ1bnQzbG5zbW9pZiJ9.Z2O_P4_eBD4FGMmIgwFOoA';
+var map = new mapboxgl.Map({
+  container: 'YOUR_CONTAINER_ELEMENT_ID',
+  style: 'mapbox://styles/mapbox/streets-v11'
+});
