@@ -10,7 +10,6 @@ class AnimalsController < ApplicationController
           lng: animal.habitats.first.long
         }
       end
-      raise
     else
       @animals = Animal.all
       @markers = @animals.geocoded.map do |animal|
@@ -18,19 +17,19 @@ class AnimalsController < ApplicationController
           lat: animal.habitats.first.lat,
           lng: animal.habitats.first.long
         }
-        raise
       end
     end
   end
 
   def show
     @animal = Animal.find(params[:id])
-    @markers =
-        {
-          lat: @animal.habitats.first.lat,
-          lng: @animal.habitats.first.long
-        }
-        raise
+    @markers = []
+    @animal.habitats.each do |habitat|
+      @markers << {
+        lat: habitat.lat,
+        lng: habitat.long
+      }
+    end
 
   end
 end
