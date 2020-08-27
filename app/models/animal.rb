@@ -1,4 +1,5 @@
 class Animal < ApplicationRecord
+  has_many :habitats
   has_many :subregions, through: :habitats
   has_many :users, through: :favorites
 
