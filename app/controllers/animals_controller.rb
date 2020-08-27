@@ -19,4 +19,5 @@ class AnimalsController < ApplicationController
       }
     end
   end
+
 end
