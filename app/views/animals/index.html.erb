@@ -1,7 +1,6 @@
 
 <h1 class="text-center">Searching animals</h1>
 
-
 <div class="container">
   <div class="row justify-content-center">
     <% @animals.each do |animal| %>
@@ -11,6 +10,7 @@
           <div class="card-animal-infos">
             <h2><%= animal.common_name %></h2>
             <h4><i><%= animal.latin_name %></i></h4>
+            <p><%= animal.id %></p>
           </div>
         <% end %>
       </div>
