@@ -1,31 +1,16 @@
-
-<h2><%= @animal.common_name %></h2>
-<p><%= @animal.latin_name %></p>
-<p><%= @animal.description %></p>
-<%# <%= image_tag animal.photo %>
-<div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-
-<div class="container-animal text-center">
-  <h2><%= @animal.common_name %></h2>
-  <p><%= @animal.latin_name %></p>
-  <%= image_tag @animal.image %><br>
-  <p><%= @animal.description %></p>
-  <ul>
-    <% @animal.habitats.each do |habitat| %>
-    <li>
-      <p>Longitude : <%= habitat.long %></p>
-      <p>Latitude : <%= habitat.lat %></p>
-    </li>
-    <% end %>
-  </ul>
-  <div class="mt-4">
-    <%= link_to '< Back', animals_path, id: 'back-btn', class: 'btn btn-primary' %>
+<div class= 'container'>
+  <div class="container-animal text-center">
+    <h2><%= @animal.common_name %></h2>
+    <p><i><%= @animal.latin_name %></i></p>
+    <%= image_tag @animal.image %><br>
+    <div class= 'description'>
+      <p><%= @animal.description %></p>
+    </div>
+    <div id="map"
+      style="width: 100%; height: 200px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
 </div>
-
-
     <%= render 'shared/footer' %>
