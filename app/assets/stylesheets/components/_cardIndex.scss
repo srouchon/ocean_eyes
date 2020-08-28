@@ -2,7 +2,7 @@
   margin: 8px;
   overflow: hidden;
   border-radius: 5px;
-  width: 90%;
+  width: 300px;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -10,21 +10,45 @@
   align-items: center;
 }
 
-.card-animal img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+a > .card-animal {
+
+  .card-img {
+  height: 120px;
+  width: 50%;
+  }
+
+  .card-img img{
+    height: 100%;
+    object-fit: cover;
+  }
+  .card-animal-infos {
+    width: 50%;
+    height: 100%;
+    padding-top: 10%;
+    background-color: white;
+    // padding: 16px;
+    h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    }
+    h4 {
+    font-size: 12px;
+    text-align: center;
+    }
+  }
 }
 
-.card-animal h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+// .card-animal h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
 
-.card-animal h4 {
-  font-size: 12px;
-}
-.card-animal .card-animal-infos {
-  padding: 16px;
-}
+// .card-animal h4 {
+//   font-size: 12px;
+// }
+// .card-animal .card-animal-infos {
+//   padding: 16px;
+// }
