@@ -1,20 +1,26 @@
 
-<h1 class="text-center">Searching animals</h1>
+<h1 class="text-center">Results</h1>
 
 <div class="container">
   <div class="row justify-content-center">
+
     <% @animals.each do |animal| %>
-      <div class="card-animal" id="animals">
-        <% if animal.image %>
-        <%= image_tag animal.image, width: 200 %>
-          <div class="card-animal-infos">
-            <h2><%= animal.common_name %></h2>
-            <h4><i><%= animal.latin_name %></i></h4>
-            <p><%= animal.id %></p>
+        <%= link_to animal_path(animal) do %>
+          <div class="card-animal">
+              <% if animal.image %>
+                <div class="card-img">
+                  <%= image_tag animal.image, width: 200 %>
+                </div>
+                <div class="card-animal-infos">
+                  <h2><%= animal.common_name %></h2>
+                  <h4><i><%= animal.latin_name %></i></h4>
+                </div>
+              <% end %>
           </div>
         <% end %>
-      </div>
+
     <% end %>
+
   </div>
 </div>
 
