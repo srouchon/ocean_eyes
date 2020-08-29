@@ -122,6 +122,7 @@ nav {
 	}
 
 	.menu-btn {
+		z-index: 7;
 		display: flex;
 		position: fixed;
 		left: 3px;
@@ -130,6 +131,7 @@ nav {
 }
 
 .nav-active {
+	z-index: 5;
 	-webkit-transform: translateX(0%);
 	-ms-transform: translateX(0%);
 	-o-transform: translateX(0%);
