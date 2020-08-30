@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 .home_video {
  width: 100vw;
- height: 50%;
+ height: 380px;
  position: absolute;
  display: flex;
  justify-content: center;
@@ -11,9 +11,19 @@
 }
 
 .search-bar {
-  margin-top: 8%;
+  margin-top: 72px;
 }
 
+.form-control {
+  border-radius: 20px;
+}
+
+.btn {
+  position: absolute;
+  right: 15px;
+  top: 358px;
+  border-radius: 20px;
+}
 .logo{
   margin-top: 41px;
   margin-left: 70px;
