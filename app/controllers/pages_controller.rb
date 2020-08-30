@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :associations, :thanks, :aboutUs]
 
   def home
+  @animals = Animal.order("RANDOM()").limit(5)
   end
 
   def associations
