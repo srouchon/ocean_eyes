@@ -1,15 +1,7 @@
 <div class="sign-in-out">
   <% if user_signed_in? %>
-    <li class="nav-item-active">
-      <%= link_to "Favorites", favorites_path %>
-    </li>
     <li class="nav-item">
-    </li>
-    <li>
-      <div>
-        <%# <%= link_to "Settings", edit_user_registration_path %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      </div>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
     </li>
   <% else %>
     <li class="nav-item">
