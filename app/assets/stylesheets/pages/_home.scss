@@ -10,10 +10,20 @@
  z-index: -2;
 }
 
+.title {
+  color: white;
+  font-size: 27px;
+  margin: 13px;
+}
+.container {
+  margin-bottom: 50px;
+}
+
 h2 {
   padding-bottom: 10px;
   padding-top: 20px;
 }
+
 .search-bar {
   margin-top: 72px;
 }
@@ -31,4 +41,9 @@ h2 {
 .logo{
   margin-top: 41px;
   margin-left: 70px;
+}
+
+body {
+  background: -o-linear-gradient(30deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
 }
