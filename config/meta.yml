@@ -1,0 +1,5 @@
+meta_product_name: "Ocean Eyes"
+meta_title: "OceanEyes. This website was designed as a final project of Le Wagon. The objective is to enhance the way one can vizualizes diferrent species in the ocean."
+meta_description: "This app friendly website was designed to vizualise ocean creatures via augmented reality."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
