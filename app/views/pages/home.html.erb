@@ -4,10 +4,9 @@
 
   <%= image_tag "logo.svg", class: "logo" %>
 
-
 <div class="container text-center">
   <%= render 'shared/searchbar' %>
-  <h2>Suggestions</h2>
+  <h2 class="title">Suggestions</h2>
 
   <div class="row justify-content-center">
     <% @animals.each do |animal| %>
@@ -28,6 +27,4 @@
   </div>
 </div>
 
-
-
-    <%= render 'shared/footer' %>
+  <%= render 'shared/footer' %>
