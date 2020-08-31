@@ -1,2 +1,18 @@
-<h1>Ar#index</h1>
-<p>Find me in app/views/ar/index.html.erb</p>
+<div class="arjs-loader">
+  <div>Loading, please wait...</div>
+</div>
+<a-scene embedded arjs>
+    <!-- Adding an OBJ file to an AR Project-->
+
+    <a-entity
+      gltf-model="url(whale.gltf)"
+      scale="25 25 25"
+      position="50 150 0"
+    ></a-entity>
+
+  <!--    <a-image src="WHALMPIE.JPG"></a-image>
+   -->
+
+    <a-marker-camera preset='hiro'></a-marker-camera>
+
+</a-scene>
