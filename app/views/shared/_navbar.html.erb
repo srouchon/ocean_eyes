@@ -1,6 +1,9 @@
 <header>
 	<nav>
     <ul class="nav-menu">
+      
+      <%= image_tag "logo_navbar.svg", class: "logo-navbar" %>
+
       <li>
         <%= link_to "Home", root_path %>
       </li>
@@ -8,10 +11,10 @@
         <%= link_to "Favorites", favorites_path %>
       </li>
       <li>
-        <%= link_to "Know more about us", aboutus_path %>
+        <%= link_to "Know more About us", aboutus_path %>
       </li>
       <li>
-        <%= link_to "Marine Life associations", associations_path %>
+        <%= link_to "Marine Life Associations", associations_path %>
       </li>
       <li>
         <%= link_to "Augmented Reality (Beta-Test)", ar_show_path %>

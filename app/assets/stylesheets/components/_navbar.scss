@@ -40,6 +40,10 @@ nav {
 	text-transform: uppercase;
 }
 
+.logo-navbar{
+	margin-left: 40px;
+}
+
 .nav-menu {
 	display: flex;
 	justify-content: space-around;
@@ -126,7 +130,6 @@ nav {
 		z-index: 7;
 		display: flex;
 		position: fixed;
-		left: 3px;
 		top: 0;
 	}
 }
@@ -137,7 +140,7 @@ nav {
 	-ms-transform: translateX(0%);
 	-o-transform: translateX(0%);
 	transform: translateX(0%);
-  padding-top: 50%;
+  padding-top: 20%;
 }
 
 .toggle .line1 {
