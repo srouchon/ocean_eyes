@@ -5,5 +5,6 @@ class ArController < ApplicationController
 
   def show
     render layout: "ar"
+
   end
 end
