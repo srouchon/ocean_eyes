@@ -4,6 +4,6 @@ class ArController < ApplicationController
   end
 
   def show
-    # render layout: "ar_layout"
+    render layout: "ar"
   end
 end
