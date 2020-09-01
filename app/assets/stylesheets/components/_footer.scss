@@ -1,115 +1,231 @@
-* {
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// section {
+//   z-index: 6;
+//   position: relative;
+//   width: 100%;
+//   height: 30vh;
+//   overflow: hidden;
+// }
+
+// section .wave {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 198px;
+//   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg');
+//   background-size: 1600px 198px;
+// }
+
+// section .wave.wave1 {
+//   animation: animate-wave-1 30s linear infinite;
+//   z-index: 1000;
+//   opacity: 1;
+//   animation-delay: 0s;
+//   bottom: 0;
+// }
+
+// section .wave.wave2 {
+//   animation: animate-wave-2 15s linear infinite;
+//   z-index: 999;
+//   opacity: 0.5;
+//   animation-delay: -5s;
+//   bottom: 10px;
+// }
+
+// section .wave.wave3 {
+//   animation: animate-wave-3 30s linear infinite;
+//   z-index: 998;
+//   opacity: 0.2;
+//   animation-delay: -2s;
+//   bottom: 15px;
+// }
+
+// section .wave.wave4 {
+//   animation: animate-wave-4 5s linear infinite;
+//   z-index: 997;
+//   opacity: 0.7;
+//   animation-delay: -5s;
+//   bottom: 20px;
+// }
+
+// @keyframes animate-wave-1 {
+//   0% {
+//      background-position-x: 0;
+//   }
+//   100% {
+//      background-position-x: 1600px;
+//   }
+// }
+
+// @keyframes animate-wave-2 {
+//   0% {
+//      background-position-x: 0;
+//   }
+//   100% {
+//      background-position-x: -1600px;
+//   }
+// }
+
+// @keyframes animate-wave-3 {
+//   0% {
+//      background-position-x: 0;
+//   }
+//   100% {
+//      background-position-x: 1600px;
+//   }
+// }
+
+// @keyframes animate-wave-4 {
+//   0% {
+//      background-position-x: 0;
+//   }
+//   100% {
+//      background-position-x: -1600px;
+//   }
+// }
+
+// .footer {
+//   z-index: 7;
+//   position: absolute;
+//   background: #0F6279;
+//   width: 100%;
+//   height: 100px;
+//   align-items: center;
+//   justify-content: space-between;
+//   color: rgba(0,0,0,0.3);
+// }
+// .footer-links {
+//   display: flex;
+//   align-items: center;
+// }
+// .footer-links a {
+//   color: white;
+//   text-decoration: none;
+//   font-size: 24px;
+//   padding: 0px 10px;
+// }
+// .footer .fa-heart {
+//   color: #DE7362;
+// }
+body {
+  margin: 0;
+}
+
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-section {
-  z-index: 6;
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: #fff;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.waves {
   position: relative;
   width: 100%;
-  height: 30vh;
-  overflow: hidden;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 100px;
 }
 
-section .wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 198px;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg');
-  background-size: 1600px 198px;
+.parallax > use {
+  -webkit-animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+          animation: moveForever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
 
-section .wave.wave1 {
-  animation: animate-wave-1 30s linear infinite;
-  z-index: 1000;
-  opacity: 1;
-  animation-delay: 0s;
-  bottom: 0;
+.parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
 }
 
-section .wave.wave2 {
-  animation: animate-wave-2 15s linear infinite;
-  z-index: 999;
-  opacity: 0.5;
-  animation-delay: -5s;
-  bottom: 10px;
+.parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
 }
 
-section .wave.wave3 {
-  animation: animate-wave-3 30s linear infinite;
-  z-index: 998;
-  opacity: 0.2;
-  animation-delay: -2s;
-  bottom: 15px;
+.parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
 }
 
-section .wave.wave4 {
-  animation: animate-wave-4 5s linear infinite;
-  z-index: 997;
-  opacity: 0.7;
-  animation-delay: -5s;
-  bottom: 20px;
+.parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
 }
 
-@keyframes animate-wave-1 {
+@-webkit-keyframes moveForever {
   0% {
-     background-position-x: 0;
+      -webkit-transform: translate3d(-90px, 0, 0);
+              transform: translate3d(-90px, 0, 0);
   }
   100% {
-     background-position-x: 1600px;
+      -webkit-transform: translate3d(85px, 0, 0);
+              transform: translate3d(85px, 0, 0);
   }
 }
 
-@keyframes animate-wave-2 {
+@keyframes moveForever {
   0% {
-     background-position-x: 0;
+      -webkit-transform: translate3d(-90px, 0, 0);
+              transform: translate3d(-90px, 0, 0);
   }
   100% {
-     background-position-x: -1600px;
+      -webkit-transform: translate3d(85px, 0, 0);
+              transform: translate3d(85px, 0, 0);
   }
 }
 
-@keyframes animate-wave-3 {
-  0% {
-     background-position-x: 0;
+@media (max-width : 768px) {
+  h1 {
+      font-size: 24px;
   }
-  100% {
-     background-position-x: 1600px;
+  .content {
+      height: 30vh;
   }
-}
-
-@keyframes animate-wave-4 {
-  0% {
-     background-position-x: 0;
-  }
-  100% {
-     background-position-x: -1600px;
+  .waves {
+      height: 40px;
+      min-height: 40px;
   }
 }
 
-.footer {
-  z-index: 7;
-  position: absolute;
-  background: #0F6279;
-  width: 100%;
-  height: 100px;
+.footer-copyright {
+  background: white;
+  font-size: 11px;
+  padding: 14px;
   align-items: center;
-  justify-content: space-between;
-  color: rgba(0,0,0,0.3);
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer .fa-heart {
-  color: #DE7362;
+  color: #888686;
 }

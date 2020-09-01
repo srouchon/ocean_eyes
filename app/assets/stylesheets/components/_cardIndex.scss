@@ -1,3 +1,10 @@
+.h2-about {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
 .card-animal {
   margin: 8px;
   overflow: hidden;
@@ -22,17 +29,17 @@ a > .card-animal {
     object-fit: cover;
   }
   .card-animal-infos {
-    width: 65%;
     height: 100%;
-    padding-top: 9%;
-    background-color: white;
+    padding-top: 18px;
+    background-color: #f4f6ff;
     text-align: center;
     // padding: 16px;
     h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-    text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+      width: 65%;
     }
     h4 {
     font-size: 12px;
@@ -40,16 +47,3 @@ a > .card-animal {
     }
   }
 }
-
-// .card-animal h2 {
-//   font-size: 16px;
-//   font-weight: bold;
-//   margin: 0;
-// }
-
-// .card-animal h4 {
-//   font-size: 12px;
-// }
-// .card-animal .card-animal-infos {
-//   padding: 16px;
-// }
