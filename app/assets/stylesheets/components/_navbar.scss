@@ -44,6 +44,12 @@ nav {
 	margin-left: 62px;
 }
 
+.logopage {
+  position: relative;
+  bottom: 34px;
+  left: 12px;
+}
+
 .nav-menu {
 	display: flex;
 	justify-content: space-around;
@@ -132,6 +138,8 @@ nav {
 		display: flex;
 		position: fixed;
 		top: 0;
+		top: 11px;
+		right: 16px;
 	}
 }
 
