@@ -1,10 +1,12 @@
 <div>
   <%= video_tag "Jellyfish.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
 </div>
+<div class="logohome text-center">
+  <%= link_to ar_show_path do %>
+    <%= image_tag "logo.svg", class: "logo" %>
+  <% end %>
+</div>
 
-<%= link_to ar_show_path do %>
-  <%= image_tag "logo.svg", class: "logo" %>
-<% end %>
 
 <div class="container text-center">
   <%= render 'shared/searchbar' %>
