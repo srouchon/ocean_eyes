@@ -7,7 +7,7 @@ class ArControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    get ar_show_url
+    get ar_index_url
     assert_response :success
   end
 
