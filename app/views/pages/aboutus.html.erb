@@ -1,15 +1,19 @@
 <div class="logopage">
+  <%= link_to root_path do %>
   <%= image_tag "logo_page.svg", class: "logo-page" %>
+  <% end %>
 </div>
 
 <div class="container">
 
-  <h2 class="h2-about">We created this app as a final project of our nine weeks training at Le Wagon Bordeaux</h2>
+  <h2 class="h2-about">This app is a final project of a nine weeks training at Le Wagon Bordeaux Coding Bootcamp</h2>
 
   <section class="cards-about">
     <article class="card card--1">
 
-      <div class="card__img"></div>
+      <div class="card__img">
+         <a href="<%= image_tag("soso.jpg", :alt => "Sophie Rouchon", :class => "about-img") %>" class="about-img"></a>
+      </div>
       <a href="#" class="card_link">
         <div class="card__img--hover"></div>
       </a>
@@ -23,7 +27,9 @@
   <section class="cards-about">
     <article class="card card--1">
 
-      <div class="card__img"></div>
+      <div class="card__img">
+         <%= image_tag("dev.jpg", :alt => "Deva Sou", :class => "about-img")  %>
+      </div>
       <a href="#" class="card_link">
         <div class="card__img--hover"></div>
       </a>
@@ -37,11 +43,13 @@
   <section class="cards-about">
     <article class="card card--1">
 
-      <div class="card__img"></div>
+      <div class="card__img">
+         <%= image_tag("vic.jpg", :alt => "Victorien Brun", :class => "about-img")  %>
+      </div>
       <a href="#" class="card_link">
         <div class="card__img--hover"></div>
       </a>
-      <div class="card__info">
+      <div class="card__info"
         <span class="card__category"> DEVELOPER FULL STACK</span>
         <h4 class="card__title">Victorien Brun</h4>
       </div>
@@ -51,7 +59,9 @@
   <section class="cards-about">
     <article class="card card--1">
 
-      <div class="card__img"></div>
+      <div class="card__img">
+         <%= image_tag("ophe.jpg", :alt => "Ophelie Roux", :class => "about-img")  %>
+      </div>
       <a href="#" class="card_link">
         <div class="card__img--hover"></div>
       </a>

@@ -13,51 +13,58 @@
 //   align-items: center;
 // }
 
-.cards-about {
+.about-img {
   width: 100%;
+  position:absolute;
+}
+
+.card--1{
+  background-color: white;
+}
+
+.cards-about {
+  width: 90%;
   display: flex;
   display: -webkit-flex;
   justify-content: center;
   -webkit-justify-content: center;
-}
 
-.card--1 .card__img, .card--1 .card__img--hover {
-  background-image: url('https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
 }
 
 .card__img {
   visibility: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 235px;
-  border-top-left-radius: 12px;
-border-top-right-radius: 12px;
-  
-}
-
-.card__info-hover {
-  position: absolute;
-  padding: 16px;
-  width: 100%;
-  opacity: 0;
-  top: 0;
-}
-
-.card__img--hover {
-  transition: 0.2s all ease-out;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  position: absolute;
   height: 235px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  top: 0;
-  
+  width: 100%;
+  position:absolute;
 }
+
+// .card__info-hover {
+//   position: absolute;
+//   padding: 16px;
+//   width: 100%;
+//   opacity: 0;
+//   top: 0;
+// }
+
+// .card__img--hover {
+//   transition: 0.2s all ease-out;
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   width: 100%;
+//   position: absolute;
+//   height: 235px;
+//   border-top-left-radius: 12px;
+//   border-top-right-radius: 12px;
+//   top: 0;
+
+// }
 .card {
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
@@ -102,17 +109,17 @@ border-top-right-radius: 12px;
     font-weight: 500;
 }
 
-.card:hover .card__img--hover {
-    height: 100%;
-    opacity: 0.3;
-}
+// .card:hover .card__img--hover {
+//     height: 100%;
+//     opacity: 0.3;
+// }
 
-.card:hover .card__info {
-    background-color: transparent;
-    position: relative;
-}
+// .card:hover .card__info {
+//     background-color: transparent;
+//     position: relative;
+// }
 
-.card:hover .card__info-hover {
-    opacity: 1;
-}
+// .card:hover .card__info-hover {
+//     opacity: 1;
+// }
 
