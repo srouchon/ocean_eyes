@@ -10,7 +10,9 @@
     <p><i><%= @animal.latin_name %></i></p>
     <%= image_tag @animal.image %><br>
     <div class= 'description'>
-      <p><%= @animal.description %></p>
+      <% if @animal.description != nil %>
+        <p><%= @animal.description.gsub(/\(Ref\.(.(\w|,|\s)*)\)/, "") %></p>
+      <% end %>
     </div>
     <div id="map"
       style="width: 100%; height: 200px;"
@@ -20,3 +22,4 @@
   </div>
 </div>
     <%= render 'shared/footer' %>
+
