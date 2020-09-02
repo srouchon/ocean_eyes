@@ -7,7 +7,8 @@ class HabitatsController < ApplicationController
     @habitats.each do |habitat|
       @markers << {
         lat: habitat.lat,
-        lng: habitat.long
+        lng: habitat.long,
+        infoWindow: render_to_string(partial: "info_window", locals: { habitat: habitat })
       }
     end
   end
