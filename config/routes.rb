@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :subregions, only: [:index]
   resources :favorites, only: [:index, :destroy]
   resources :ar, only: [:index]
-
+  resources :habitats, only: [:index]
 end

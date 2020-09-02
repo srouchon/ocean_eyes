@@ -13,4 +13,7 @@ class PagesController < ApplicationController
 
   def aboutUs
   end
+
+  def habitats
+  end
 end
