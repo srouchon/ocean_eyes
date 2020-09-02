@@ -1,3 +1,3 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
-//= link microjellyfish.mp4
+//= link tinymicrojellyfish.mp4
