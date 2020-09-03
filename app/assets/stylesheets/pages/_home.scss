@@ -78,5 +78,8 @@ body {
   width: 350px;
   border-radius: 5px;
   box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
-
 }
+.container-full-height{
+  min-height: calc(100vh - 227px);
+}
+
