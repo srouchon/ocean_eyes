@@ -1,3 +1,4 @@
 <h2><%= habitat.animal.common_name %></h2>
 <p><%= habitat.animal.latin_name %></p>
-<%= link_to "more details", animal_path(habitat.animal_id) %>
+<%=image_tag(habitat.animal.image, size: "200x100")%>
+<%= link_to "MORE DETAILS", animal_path(habitat.animal_id) %>
