@@ -38,6 +38,7 @@ body {
   background: -o-linear-gradient(30deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
   background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
 }
+
 .search-form-control {
   position: relative;
 }
@@ -61,3 +62,9 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+.card-explore {
+  width: 350px;
+  border-radius: 5px;
+  box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
+
+}
