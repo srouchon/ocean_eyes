@@ -60,7 +60,7 @@ def parse_gbif_api(animal)
     if animal[:latin_name] == result["species"]
       bbb = Habitat.create!(animal_id: animal.id, long: result["decimalLongitude"], lat: result["decimalLatitude"])
     else
-      puts 'error'
+      puts 'not added habitat'
     end
   end
 end
@@ -70,13 +70,15 @@ end
 animals.each do |animal|
   unless animal["Genus"] == nil || animal["Species"] == nil || animal["FBname"] == nil || animal["image"] == nil
     a = Animal.create(common_name: animal["FBname"], latin_name: "#{animal["Genus"]} #{animal["Species"]}", description: animal["Comments"], image: animal["image"])
+    puts "Animal = #{a.latin_name}"
     parse_gbif_api(a)
+    puts 'habitat added'
   end
 end
 
 # manually adding barramundi
 barra_description = "Dorsal spines (total): 7 - 9; Dorsal soft rays (total): 10-11; Anal spines: 3; Anal soft rays: 7 - 8. Body elongate; mouth large, slightly oblique, upper jaw extending behind the eye. Lower edge of preopercle serrated, with strong spine at its angle; opercle with a small spine and with a serrated flap above the origin of the lateral line. Caudal fin rounded."
 
-barramundi = Animal.create(common_name: "Barramundi", latin_name: "Lates calcarifer", description: barra_description, image: "app/assets/images/barramundi.png")
+barramundi = Animal.create(common_name: "Barramundi", latin_name: "Lates calcarifer", description: barra_description, image: "https://www.fishbase.ca/images/species/Lacal_u1.gif")
 
 puts 'finished'
