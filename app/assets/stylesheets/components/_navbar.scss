@@ -12,10 +12,12 @@ body {
 a {
 	text-decoration: none;
 	color: #111;
+
 }
 
 li {
 	list-style: none;
+
 }
 
 nav {
@@ -65,7 +67,9 @@ nav {
 	align-items: center;
 	color: #fcf8ef;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 23px;
+  padding: 15px;
+  font-family: helvetica, sans-serif;
 	letter-spacing: 2px;
 	line-height: 55px;
 	text-align: center;
@@ -118,7 +122,7 @@ nav {
 		height: 100%;
 		background: -o-linear-gradient(30deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
 		background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
-			display: block;
+		display: block;
 		padding: 0;
 		-webkit-transform: translateX(-100%);
 		-ms-transform: translateX(-100%);
