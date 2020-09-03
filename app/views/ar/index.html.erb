@@ -11,11 +11,15 @@
 <div class='ar-container d-flex'>
   <div class='ar-bg'>
     <a-scene embedded arjs='trackingMethod: best;'>
-      <a-gltf-model src="ar/Dolphin.gltf" position="0 0.5 0" scale="0.01 0.01 0.01"></a-gltf-model>
+        <a-assets>
+          <a-asset-item id="model" src="ar/Dolphin.gltf" crossOrigin="anonymous"></a-asset-item>
+        </a-assets>
+      <a-gltf-model src="#model" position="0 0.5 0" scale="0.01 0.01 0.01"></a-gltf-model>
       <a-marker-camera preset='hiro'></a-marker-camera>
       <a-camera-static/>
     </a-scene>
   </div>
+
   <div class='ar-quit-button'>
     <%#= link_to "Back", root_path %>
     <!-- <a href="/" onclick="window.location.reload(true);">Back</a>  </div> -->
