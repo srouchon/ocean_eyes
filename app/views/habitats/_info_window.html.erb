@@ -1,4 +1,6 @@
 <h2><%= habitat.animal.common_name %></h2>
 <p><%= habitat.animal.latin_name %></p>
 <%=image_tag(habitat.animal.image, size: "200x100")%>
-<%= link_to "MORE DETAILS", animal_path(habitat.animal_id) %>
+<%= link_to animal_path(habitat.animal_id) do %>
+  <div class='btn btn-dark mt-3'>More details</div>
+<% end %>
