@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'habitats/index'
   devise_for :users
   root to: 'pages#home'
   resources :animals, only: [:index, :show] do
