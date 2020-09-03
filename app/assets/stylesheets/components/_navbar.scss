@@ -12,10 +12,12 @@ body {
 a {
 	text-decoration: none;
 	color: #111;
+
 }
 
 li {
 	list-style: none;
+
 }
 
 nav {
@@ -65,7 +67,9 @@ nav {
 	align-items: center;
 	color: #fcf8ef;
 	display: inline-block;
-	font-size: 14px;
+	font-size: 23px;
+  padding: 15px;
+  font-family: helvetica, sans-serif;
 	letter-spacing: 2px;
 	line-height: 55px;
 	text-align: center;
