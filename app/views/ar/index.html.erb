@@ -1,17 +1,21 @@
-<a-scene embedded arjs='trackingMethod: best;'>
+<!-- <a-scene embedded arjs='trackingMethod: best;'>
   <a-assets>
-    <a-asset-item id="model" src="ar/whale.gltf" crossOrigin="anonymous"></a-asset-item>
+    <a-asset-item id="model" src="ar/BarramundiFish.gltf" crossOrigin="anonymous"></a-asset-item>
   </a-assets>
 
   <a-gltf-model src="#model" position="0 0.5 0" scale="0.05 0.05 0.05"></a-gltf-model>
   <a-marker-camera preset='hiro'></a-marker-camera>
   <a-camera-static/>
-</a-scene>
+</a-scene> -->
 
+<a-scene embedded arjs='trackingMethod: best;'>
+  <a-gltf-model src="ar/whale.gltf" position="0 -10 0" scale="0.01 0.01 0.01"></a-gltf-model>
+  <a-marker-camera preset='hiro'></a-marker-camera>
+  <a-camera-static/>
+</a-scene>
 
 <div class="logohome text-center">
   <%= link_to ar_index_path do %>
     <%= image_tag "logo.svg", class: "logo" %>
   <% end %>
 </div>
-

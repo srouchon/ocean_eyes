@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get '/aboutus', to: 'pages#aboutus'
   resources :subregions, only: [:index]
   resources :favorites, only: [:index, :destroy]
-  resources :ar, only: [:index, :show]
+  resources :ar, only: [:index]
+  resources :habitats, only: [:index]
 end
