@@ -2,7 +2,7 @@ class HabitatsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @habitats = Habitat.all
+    @habitats = Habitat.order(Arel.sql('RANDOM()')).first(10)
     @markers = []
     @habitats.each do |habitat|
       @markers << {

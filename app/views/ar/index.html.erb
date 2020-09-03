@@ -8,14 +8,17 @@
   <a-camera-static/>
 </a-scene> -->
 
-<a-scene embedded arjs='trackingMethod: best;'>
-  <a-gltf-model src="ar/Dolphin.gltf" position="0 0.5 0" scale="0.01 0.01 0.01"></a-gltf-model>
-  <a-marker-camera preset='hiro'></a-marker-camera>
-  <a-camera-static/>
-</a-scene>
-
-<div class="logohome text-center">
-  <%= link_to ar_index_path do %>
-    <%= image_tag "logo.svg", class: "logo" %>
-  <% end %>
+<div class='ar-container d-flex'>
+  <div class='ar-bg'>
+    <a-scene embedded arjs='trackingMethod: best;'>
+      <a-gltf-model src="ar/Dolphin.gltf" position="0 0.5 0" scale="0.01 0.01 0.01"></a-gltf-model>
+      <a-marker-camera preset='hiro'></a-marker-camera>
+      <a-camera-static/>
+    </a-scene>
+  </div>
+  <div class='ar-quit-button'>
+    <%#= link_to "Back", root_path %>
+    <!-- <a href="/" onclick="window.location.reload(true);">Back</a>  </div> -->
+    <a data-turbolinks='false' href="/"><i class="fas fa-arrow-circle-left"></i></a>
+    <%#= redirect_to @root_path, turbolinks: false %>
 </div>
