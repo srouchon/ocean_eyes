@@ -16,3 +16,32 @@
   font-size: 1.25em;
   color: white;
 }
+
+.ar-container {
+  position: relative;
+  width: 1vh;
+  z-index: 0;
+}
+
+video {
+  z-index:100;
+  // width: 0.5vh;
+  position: relative;
+}
+
+.ar-quit-button {
+  size:20px;
+  position: fixed;
+  top:0;
+  text-align: center;
+  right:51%;
+  margin-top: 2%;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+.fas {
+  font-size: 48px;
+  color: white;
+}
+
