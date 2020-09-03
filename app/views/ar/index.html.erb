@@ -4,17 +4,36 @@
   <% end %>
 </div>
 
-<h1 class="text-center">Results</h1>
+<h1 class="text-center">Augmented Reality</h1>
 
 <div class="container">
-  <div class="cardd">
-    <h3>Barramundi Fish</h3>
-    <%= link_to '3D', ar_show_path({animal: "BarramundiFish", scale: 0.1}) %>
+
+  <div class="row justify-content-center">
+    <div class="card-animal">
+      <h3>Barramundi</h3>
+        <div class="card-animal-infos">
+          <%= link_to ar_show_path({animal: "BarramundiFish", scale: 0.1}) do %>
+          <%= image_tag "btn-3d.svg", class: "btn-3d" %>
+          <% end %>
+        </div>
+    </div>
+
+    <div class="card-animal">
+      <h3>Duck</h3>
+        <div class="card-animal-infos">
+          <%= link_to ar_show_path({animal: "Duck", scale: 1}) do %>
+          <%= image_tag "btn-3d.svg", class: "btn-3d" %>
+          <% end %>
+        </div>
+    </div>
   </div>
-  <div class="cardd">
-    <h3>Duck</h3>
-    <%= link_to '3D', ar_show_path({animal: "Duck", scale: 1}) %>
+
+  <div class="hiro">
+    <img  alt="Hiro" src="https://stemkoski.github.io/AR-Examples/markers/hiro.png" />
   </div>
+
 </div>
+
+
 
 <%= render 'shared/footer' %>
