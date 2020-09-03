@@ -74,4 +74,9 @@ animals.each do |animal|
   end
 end
 
+# manually adding barramundi
+barra_description = "Dorsal spines (total): 7 - 9; Dorsal soft rays (total): 10-11; Anal spines: 3; Anal soft rays: 7 - 8. Body elongate; mouth large, slightly oblique, upper jaw extending behind the eye. Lower edge of preopercle serrated, with strong spine at its angle; opercle with a small spine and with a serrated flap above the origin of the lateral line. Caudal fin rounded."
+
+barramundi = Animal.create(common_name: "Barramundi", latin_name: "Lates calcarifer", description: barra_description, image: "app/assets/images/barramundi.png")
+
 puts 'finished'
