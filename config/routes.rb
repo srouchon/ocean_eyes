@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'habitats/index'
   devise_for :users
   root to: 'pages#home'
   resources :animals, only: [:index, :show] do
@@ -12,5 +13,5 @@ Rails.application.routes.draw do
   resources :subregions, only: [:index]
   resources :favorites, only: [:index, :destroy]
   resources :ar, only: [:index]
-
+  resources :habitats, only: [:index]
 end

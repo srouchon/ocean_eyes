@@ -1,5 +1,8 @@
 <div>
-  <%= video_tag "microjellyfish.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+
+  <%# <%= video_tag "microjellyfish.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+  <%= image_tag "turtle.jpg", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_image" %>
+                   
 </div>
 <div class="logohome text-center">
   <%= link_to ar_index_path do %>
@@ -28,7 +31,14 @@
       <% end %>
     <% end %>
   </div>
+
+<div class="explore-card">
+    <%= image_tag "carte_explore.png", class: "card-explore" %>
 </div>
+
+</div>
+
+
 
 <%= render 'shared/footer' %>
 
