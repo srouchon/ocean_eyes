@@ -45,10 +45,11 @@ video {
   color: white;
 }
 
-.btn-3d {  
-  right: 21px;
+.btn-3d {
+  width: 47px;
+  right: 25px;
   position: absolute;
-  margin-top: 20px;
+  margin-top: 29px;
 }
 
 .hiro {
@@ -76,8 +77,13 @@ video {
 
 .card-animal > img {
   width: 134px;
+  height: 100%;
 }
 
 h1 {
+  color: white;
+}
+
+.p-ar {
   color: white;
 }

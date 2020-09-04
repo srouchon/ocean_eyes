@@ -1,6 +1,4 @@
-body {
-  margin: 0;
-}
+
 
 .inner-header {
   height: 65vh;
@@ -30,12 +28,15 @@ body {
 }
 
 .waves {
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 15vh;
   margin-bottom: -7px;
   min-height: 100px;
   max-height: 100px;
+  bottom: 0;
+  // position: absolute;
+  // margin-bottom: 42px;
 }
 
 .parallax > use {
@@ -101,8 +102,8 @@ body {
       height: 30vh;
   }
   .waves {
-      height: 40px;
-      min-height: 40px;
+      height: 70px;
+      min-height: 70px;
   }
 }
 .footer {
@@ -114,8 +115,13 @@ body {
   padding: 14px;
   align-items: center;
   color: #888686;
+  bottom: -26px;
+  // position: absolute;
+  width: 100%;
   .fas {
   font-size: 12px;
   color: #888686;
+  height: 25px;
+  position: relative;
 }
 }
