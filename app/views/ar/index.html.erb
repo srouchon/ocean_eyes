@@ -6,12 +6,18 @@
 
 <h1 class="text-center">Augmented Reality</h1>
 
-<div class="container">
+<div class="container text-center">
+
+<p class="textAR">Print <a href="https://stemkoski.github.io/AR-Examples/markers/hiro.png"><u>this picture</u></a> to try the Augmented Reality feature</p>
+
 
   <div class="row justify-content-center">
     <div class="card-animal">
-      <h3>Barramundi</h3>
+      <%= image_tag "barramoundi.jpg" %>
+
         <div class="card-animal-infos">
+          <h3 class="titre3d">Barramundi</h3>
+          <i class="i3d">Lates calcarifer</i>
           <%= link_to ar_show_path({animal: "BarramundiFish", scale: 0.1}) do %>
           <%= image_tag "btn-3d.svg", class: "btn-3d" %>
           <% end %>
@@ -19,17 +25,15 @@
     </div>
 
     <div class="card-animal">
-      <h3>Duck</h3>
-        <div class="card-animal-infos">
-          <%= link_to ar_show_path({animal: "Duck", scale: 1}) do %>
-          <%= image_tag "btn-3d.svg", class: "btn-3d" %>
-          <% end %>
-        </div>
+      <%= image_tag "duck.jpg" %>
+      <div class="card-animal-infos">
+        <h3 class="titre3d">Duck</h3>
+        <i class="i3d">Anas</i>
+        <%= link_to ar_show_path({animal: "Duck", scale: 1}) do %>
+        <%= image_tag "btn-3d.svg", class: "btn-3d" %>
+        <% end %>
+      </div>
     </div>
-  </div>
-
-  <div class="hiro">
-    <img  alt="Hiro" src="https://stemkoski.github.io/AR-Examples/markers/hiro.png" />
   </div>
 
 </div>

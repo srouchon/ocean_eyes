@@ -46,10 +46,38 @@ video {
 }
 
 .btn-3d {  
-  right: 30px;
+  right: 21px;
   position: absolute;
+  margin-top: 20px;
 }
 
 .hiro {
   width: 30px;
+}
+
+.barramundi {
+  // height: 120px;
+  width: 134px;
+}
+
+.titre3d {
+  margin: -6px;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.i3d {
+  font-size: 12px;
+  padding-left: 50px;
+}
+
+
+
+.card-animal > img {
+  width: 134px;
+}
+
+h1 {
+  color: white;
 }
