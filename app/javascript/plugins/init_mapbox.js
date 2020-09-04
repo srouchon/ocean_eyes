@@ -21,10 +21,16 @@ const initMapbox = () => {
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
 
-      new mapboxgl.Marker()
+      if  (mapElement.dataset.withmarker == "true") {
+        new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
-        .setPopup(popup)
+        .addTo(map)
+        .setPopup(popup);
+      } else {
+        new mapboxgl.Marker()
+        .setLngLat([ marker.lng, marker.lat ])
         .addTo(map);
+      }
     });
 
     fitMapToMarkers(map, markers);
