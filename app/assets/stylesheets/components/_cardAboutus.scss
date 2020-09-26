@@ -18,6 +18,10 @@
   position:absolute;
 }
 
+.h2-about {
+  padding: 15px;
+}
+
 .card--1{
   background-color: white;
 }
@@ -28,7 +32,7 @@
   display: -webkit-flex;
   justify-content: center;
   -webkit-justify-content: center;
-
+  padding: 15px;
 }
 
 .card__img {
@@ -40,7 +44,7 @@
   height: 235px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  width: 100%;
+  width: 315px;
   // position:absolute;
 }
 

@@ -4,73 +4,78 @@
   <% end %>
 </div>
 
-<div class="container container-full-height">
+<div class="title text-center">
+  <h1>About Us</h1>
+</div>
 
+<div class="container">
   <h2 class="h2-about">This app is a final project of a nine weeks training at Le Wagon Bordeaux Coding Bootcamp</h2>
+  <div class="row justify-content-center">
 
-  <section class="cards-about">
-    <article class="card card--1">
+    <section class="cards-about">
+      <article class="card card--1">
 
-      <div class="card__img">
-         <%= image_tag("soso.jpg", :alt => "Sophie Rouchon", :class => "about-img") %>
-      </div>
-      <a href="#" class="card_link">
-        <div class="card__img--hover"></div>
-      </a>
-      <div class="card__info">
-        <span class="card__category">LEAD BACK DEVELOPER</span>
-        <h4 class="card__title">Sophie Rouchon</h4>
-      </div>
-    </article>
-  </section>
+        <div class="card__img">
+          <%= image_tag("soso.jpg", :alt => "Sophie Rouchon", :class => "about-img") %>
+        </div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover"></div>
+        </a>
+        <div class="card__info">
+          <span class="card__category">LEAD BACK DEVELOPER</span>
+          <h4 class="card__title">Sophie Rouchon</h4>
+        </div>
+      </article>
+    </section>
 
-  <section class="cards-about">
-    <article class="card card--1">
+    <section class="cards-about">
+      <article class="card card--1">
 
-      <div class="card__img">
-         <%= image_tag("dev.jpg", :alt => "Deva Sou", :class => "about-img")  %>
-      </div>
-      <a href="#" class="card_link">
-        <div class="card__img--hover"></div>
-      </a>
-      <div class="card__info">
-        <span class="card__category">BACK DEVELOPER</span>
-        <h4 class="card__title">Déva Sou</h4>
-      </div>
-    </article>
-  </section>
+        <div class="card__img">
+          <%= image_tag("dev.jpg", :alt => "Deva Sou", :class => "about-img")  %>
+        </div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover"></div>
+        </a>
+        <div class="card__info">
+          <span class="card__category">BACK DEVELOPER</span>
+          <h4 class="card__title">Déva Sou</h4>
+        </div>
+      </article>
+    </section>
 
-  <section class="cards-about">
-    <article class="card card--1">
+    <section class="cards-about">
+      <article class="card card--1">
 
-      <div class="card__img">
-         <%= image_tag("vic.jpg", :alt => "Victorien Brun", :class => "about-img")  %>
-      </div>
-      <a href="#" class="card_link">
-        <div class="card__img--hover"></div>
-      </a>
-      <div class="card__info">
-        <span class="card__category">LEAD FRONT DEVELOPER</span>
-        <h4 class="card__title">Victorien Brun</h4>
-      </div>
-    </article>
-  </section>
+        <div class="card__img">
+          <%= image_tag("vic.jpg", :alt => "Victorien Brun", :class => "about-img")  %>
+        </div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover"></div>
+        </a>
+        <div class="card__info">
+          <span class="card__category">LEAD FRONT DEVELOPER</span>
+          <h4 class="card__title">Victorien Brun</h4>
+        </div>
+      </article>
+    </section>
 
-  <section class="cards-about">
-    <article class="card card--1">
+    <section class="cards-about">
+      <article class="card card--1">
 
-      <div class="card__img">
-         <%= image_tag("ophe.jpg", :alt => "Ophelie Roux", :class => "about-img")  %>
-      </div>
-      <a href="#" class="card_link">
-        <div class="card__img--hover"></div>
-      </a>
-      <div class="card__info">
-        <span class="card__category">DEVELOPER FULL STACK</span>
-        <h4 class="card__title">Ophélie Roux</h4>
-      </div>
-    </article>
-  </section>
+        <div class="card__img">
+          <%= image_tag("ophe.jpg", :alt => "Ophelie Roux", :class => "about-img")  %>
+        </div>
+        <a href="#" class="card_link">
+          <div class="card__img--hover"></div>
+        </a>
+        <div class="card__info">
+          <span class="card__category">DEVELOPER FULL STACK</span>
+          <h4 class="card__title">Ophélie Roux</h4>
+        </div>
+      </article>
+    </section>
+  </div>
 </div>
 
 <%= render 'shared/footer' %>
