@@ -8,12 +8,7 @@
 
 <div class="container text-center">
 
-<div class="p-ar">
-  <p>Print <a href="https://stemkoski.github.io/AR-Examples/markers/hiro.png"><u>this picture</u></a> to try the Augmented Reality feature.</p>
-</div>
-
   <div class="row justify-content-center">
-
     <div class="card-animal">
       <%= image_tag "barramoundi.jpg" %>
       <%= link_to ar_show_path({animal: "BarramundiFish", scale: 0.08}) do %>
@@ -37,6 +32,12 @@
     </div>
   </div>
 
+  <div class="p-ar">
+    <p>Print <a href="https://stemkoski.github.io/AR-Examples/markers/hiro.png"><u>this picture</u></a> to try the Augmented Reality feature.</p>
+  </div>
+  <div class="marker-hiro">
+    <%= link_to image_tag("hiro_marker.png", width: 250), "https://stemkoski.github.io/AR-Examples/markers/hiro.png", class: "img-hiro" %>
+  </div>
 </div>
 
 
