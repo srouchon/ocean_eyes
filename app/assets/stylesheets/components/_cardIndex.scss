@@ -9,9 +9,9 @@
   margin: 11px;
   overflow: hidden;
   border-radius: 5px;
-  width: 350px;
+  width: 330px;
   height: 100px;
-  background: white;
+  background-color: #f4f6ff;
   box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -38,7 +38,7 @@ a > .card-animal {
     text-align: center;
     // padding: 16px;
     h3 {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: bold;
       margin: 0;
       text-align: center;

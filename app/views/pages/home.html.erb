@@ -1,9 +1,7 @@
-<div>
-
-  <%# <%= video_tag "microjellyfish.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
-  <%= image_tag "turtle.jpg", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_image" %>
-
+<div class="img-home">
+  <%= image_tag "turtlehd.png", class: "home_image" %>
 </div>
+
 <div class="logohome text-center">
   <%= link_to ar_index_path do %>
     <%= image_tag "logo.svg", class: "logo" %>
@@ -35,14 +33,13 @@
   <div class="row justify-content-center">
     <div class="card-animal">
       <%= image_tag "barramoundi.jpg" %>
-
-        <div class="card-animal-infos">
-          <h3 class="titre3d">Barramundi</h3>
-          <i class="i3d">Lates calcarifer</i>
-          <%= link_to ar_show_path({animal: "BarramundiFish", scale: 0.1}) do %>
-          <%= image_tag "btn-3d.svg", class: "btn-3d" %>
-          <% end %>
-        </div>
+      <%= link_to ar_show_path({animal: "BarramundiFish", scale: 0.1}) do %>
+      <%= image_tag "btn-3d.svg", class: "btn-3d" %>
+      <% end %>
+      <div class="card-animal-infos">
+        <h3 class="titre3d">Barramundi</h3>
+        <i class="i3d">Lates calcarifer</i>
+      </div>
     </div>
   </div>
 
@@ -51,11 +48,7 @@
     <%= image_tag "carte_explore.png", class: "card-explore" %>
     <% end %>
   </div>
-
-
 </div>
-
-
 
 <%= render 'shared/footer' %>
 

@@ -5,55 +5,60 @@
   <% end %>
 </div>
 
-<div class="associations-message">
-  <h4>Our website is free. To help us please consider donating to one of the following association.</h2>
+<div class="title text-center">
+  <h1>Marine life Associations</h1>
 </div>
 
+<div class="container">
+    <div class="associations-message">
+      <h4>Our website is free. To help us please consider donating to one of the following association.</h2>
+    </div>
+  <div class="row justify-content-center">
+    <div class="card-association">
+      <%= image_tag src="surfrider.jpg", class: "card-img-asso"  %>
+      <div class="card-association-infos">
+        <h5 >Surf Rider</h5>
+        <p> Surfrider Europe was created in 1990 by a group of surfers who wanted to preserve their playground.</p>
+        <a class="btn-ghost" href="https://surfrider.eu/">Donate</a>
+      </div>
+    </div>
 
-<div class="card-association">
-  <%= image_tag src="surfrider.jpg", class: "card-img-asso"  %>
-  <div class="card-association-infos">
-    <h5 >Surf Rider</h5>
-    <p> Surfrider Europe was created in 1990 by a group of surfers who wanted to preserve their playground.</p>
-    <a class="btn-ghost" href="https://surfrider.eu/">Donate</a>
+    <div class="card-association">
+      <%= image_tag src="MBA.jpg", class: "card-img-asso" %>
+      <div class="card-association-infos">
+        <h5>Marine Biological Association</h5>
+        <p> Promoting marine scientific excellence and representing the <strong>marine biological</strong> community.</p>
+        <a class="btn-ghost" href="https://www.mba.ac.uk/">Donate</a>
+      </div>
+    </div>
+
+    <div class="card-association">
+      <%= image_tag src="coralgardeners.jpg", class: "card-img-asso" %>
+      <div class="card-association-infos">
+        <h5>Coral Gardenners</h5>
+        <p> Coral reefs are the rainforests of the oceans, providing a home for a dazzling array of life.</p>
+        <a class="btn-ghost" href="https://www.coralgardeners.org/">Donate</a>
+      </div>
+    </div>
+
+    <div class="card-association">
+      <%= image_tag src="seashepperd.jpg", class: "card-img-asso" %>
+      <div class="card-association-infos">
+        <h5>Sea Shepperds</h5>
+        <p>Established in 1977, our mission is to end the <strong>destruction of habitat</strong> and slaughter of wildlife in the world’s oceans.</p>
+          <a class="btn-ghost" href="https://seashepherd.org/">Donate</a>
+      </div>
+    </div>
+
+    <div class="card-association">
+      <%= image_tag src="seacleaners.jpg", class: "card-img-asso" %>
+      <div class="card-association-infos">
+        <h5>Sea Cleaners</h5>
+        <p>Educate and prevent to raise awareness of future generations
+        </p>
+        <a class="btn-ghost" href="https://www.theseacleaners.org/en">Donate</a>
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="card-association">
-  <%= image_tag src="MBA.jpg", class: "card-img-asso" %>
-  <div class="card-association-infos">
-    <h5>Marine Biological Association</h5>
-    <p> Promoting marine scientific excellence and representing the <strong>marine biological</strong> community.</p>
-    <a class="btn-ghost" href="https://www.mba.ac.uk/">Donate</a>
-  </div>
-</div>
-
-<div class="card-association">
-  <%= image_tag src="coralgardeners.jpg", class: "card-img-asso" %>
-  <div class="card-association-infos">
-    <h5>Coral Gardenners</h5>
-    <p> Coral reefs are the rainforests of the oceans, providing a home for a dazzling array of life.</p>
-    <a class="btn-ghost" href="https://www.coralgardeners.org/">Donate</a>
-  </div>
-</div>
-
-<div class="card-association">
-  <%= image_tag src="seashepperd.jpg", class: "card-img-asso" %>
-  <div class="card-association-infos">
-    <h5>Sea Shepperds</h5>
-    <p>Established in 1977, our mission is to end the <strong>destruction of habitat</strong> and slaughter of wildlife in the world’s oceans.</p>
-      <a class="btn-ghost" href="https://seashepherd.org/">Donate</a>
-  </div>
-</div>
-
-<div class="card-association">
-  <%= image_tag src="seacleaners.jpg", class: "card-img-asso" %>
-  <div class="card-association-infos">
-    <h5>Sea Cleaners</h5>
-    <p>Educate and prevent to raise awareness of future generations
-    </p>
-    <a class="btn-ghost" href="https://www.theseacleaners.org/en">Donate</a>
-  </div>
-</div>
-
 <%= render "shared/footer" %>

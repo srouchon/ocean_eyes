@@ -22,9 +22,10 @@ li {
 
 nav {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	min-height: 45px;
 	font-family: 'Lato', sans-serif;
+	white-space: nowrap;
 }
 
 .logo {
@@ -67,11 +68,11 @@ nav {
 	align-items: center;
 	color: #fcf8ef;
 	display: inline-block;
-	font-size: 23px;
+	font-size: 16px;
   padding: 15px;
   font-family: 'Varela Round', sans-serif;
 	letter-spacing: 2px;
-	line-height: 55px;
+	// line-height: 55px;
 	text-align: center;
 	width: 100%;
 }
